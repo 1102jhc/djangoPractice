@@ -9,3 +9,14 @@ class Candidate(models.Model):
 
     def __str__(self):
         return self.name
+
+class Poll(models.Model):
+    start_date = models.DateTimeField()
+    end_date = models.DateTimeField()
+    area = models.CharField(max_length=15)
+    
+class Choice(models.Model):
+    poll = models.ForeignKey(Poll, on_delete=models.PROTECT)
+    candidate = models.ForeignKey(Candidate, on_delete=models.PROTECT)
+    votes = models.IntegerField(default=0)
+    
