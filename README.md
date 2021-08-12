@@ -1,8 +1,8 @@
 # djangoPractice
 장고 연습
 
+**MVC MODEL**
 ```
-MVC MODEL
 MODEL(데이터) - models.py
 - 정의된 클래스의 형식대로 데이터를 DB에 저장 or 불러오기
 
@@ -15,7 +15,7 @@ Controller(조율) - views.py
 ```
 *****
 
-##MVC Flow
+**MVC Flow**
 ``` 
     mysite - urls.py 
 ->  elections - urls.py 
