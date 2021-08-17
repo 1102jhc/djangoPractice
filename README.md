@@ -46,6 +46,15 @@ python manage.py runserver --insecure # 서버 실행
 
 *****
 
+# ISSUE
+```
+1. 여론조사가 두 개 이상일 시 
+http://127.0.0.1:8000/areas/%EB%AF%B8%EA%B5%AD/ 화면이
+Page not found 화면인 '여론조사가 없습니다.' 로 나옴.
+```
+
+*****
+
 ### 2021. 08. 11
 ```
 여론 조사 화면 구현
