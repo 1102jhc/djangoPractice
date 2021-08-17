@@ -25,7 +25,7 @@ Controller(조율) - views.py
 
 *****
 
-#Trouble Shooting
+*Trouble Shooting
 ```
 1. django는 debug = true 로 하는 것은 권장하지 않는다. 
 하여 false로 설정하면 admin 페이지에 css가 미적용 된다.
@@ -43,12 +43,15 @@ python manage.py collectstatic # static files를 모아준다.
 python manage.py runserver --insecure # 서버 실행
 
 ```
-##2021. 08. 11
+
+*****
+
+2021. 08. 11
 ```
 여론 조사 화면 구현
 ```
 
-##2021. 08. 12
+2021. 08. 12
 ```
 여론 조사 저장
 여론 조사 결과 보기
