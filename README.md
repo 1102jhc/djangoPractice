@@ -25,12 +25,44 @@ Controller(조율) - views.py
 
 *****
 
-##2021. 08. 11
+# Trouble Shooting
+```
+1. django는 debug = true 로 하는 것은 권장하지 않는다. 
+하여 false로 설정하면 admin 페이지에 css가 미적용 된다.
+
+해결법)
+urls.py>
+from django.views.static import serve
+url(r'^static/(?P<path>.*)', serve, kwargs={'insecure': True})  # urlpatterns에 추가
+
+settings.py>
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # STATIC_URL 밑에 추가
+
+python manage.py collectstatic # static files를 모아준다.
+
+python manage.py runserver --insecure # 서버 실행
+
+```
+
+*****
+
+# ISSUE
+```
+1. 여론조사가 두 개 이상일 시 
+http://127.0.0.1:8000/areas/%EB%AF%B8%EA%B5%AD/ 화면이
+Page not found 화면인 '여론조사가 없습니다.' 로 나옴.
+```
+
+*****
+
+### 2021. 08. 11
 ```
 여론 조사 화면 구현
 ```
 
-##2021. 08. 12
+### 2021. 08. 12
 ```
 여론 조사 저장
+여론 조사 결과 보기
 ```
+
